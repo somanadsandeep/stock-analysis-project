@@ -4,7 +4,6 @@ from database import get_connection
 def fetch_stock_data(ticker, start, end):
     print(yf.Ticker(ticker).info['longName'])
     df = yf.download(ticker, start=start, end=end, auto_adjust=True)
-    # Flatten multi-level columns returned by newer yfinance versions
     if isinstance(df.columns, type(df.columns)) and hasattr(df.columns, 'levels'):
         df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
     df.reset_index(inplace=True)
@@ -14,7 +13,6 @@ def save_to_db(df, ticker):
     conn = get_connection()
     cursor = conn.cursor()
     for _, row in df.iterrows():
-        # Use float()/int() to convert any scalar-wrapped Series to plain Python types
         cursor.execute("""
             INSERT INTO stocks (ticker, date, open, high, low, close, volume)
             VALUES (%s, %s, %s, %s, %s, %s, %s)

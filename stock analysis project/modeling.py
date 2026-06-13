@@ -12,8 +12,7 @@ def train_model(df):
     
     model = LinearRegression()
     model.fit(X_train, y_train)
-    
     predictions = model.predict(X_test)
     mse = mean_squared_error(y_test, predictions)
-    
     return model, predictions, mse
+
