@@ -1,0 +1,29 @@
+Stock Analysis - P1
+CategoryData Engineering
+Project SkillPython 6MySQL 6Data Visualization 6
+Description
+Project Description: Analyze historical stock market data to uncover trading patterns, evaluate company performance, and predict future trends using statistical and machine learning approaches.
+
+Objective:
+
+· Help investors identify reliable stocks based on historical data.
+
+· Predict stock prices and trends.
+
+· Assess factors driving stock movement.
+
+Tools Used:
+
+· Python (Pandas, Seaborn, Matplotlib), Exception, logging
+
+· SQL for data management
+
+Weeks [during training]: Week 2 ,Week3
+
+Project Type: Financial Analytics / Time Series Forecasting
+
+Outcome:
+
+· Technical analysis reports and visualizations.
+
+· Predictive models for price forecasting.
