@@ -17,4 +17,7 @@ def run_pipeline(ticker="AAPL", start="2020-01-01", end="2026-01-01"):
     print(f"Model trained with MSE: {mse}")
 
 if __name__ == "__main__":
+    ticker = input("Enter the stock ticker name: ")
+    start = input("Enter the start date in the format of yyyy-dd-mm: ")
+    end = input("Enter the start date in the format of yyyy-dd-mm: ")
     run_pipeline()
